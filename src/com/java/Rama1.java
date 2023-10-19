@@ -9,7 +9,7 @@ public class Rama1 {
 		
 		//Print Sum Using Java8?
 		
-		List<Integer> intlist = Arrays.asList(22,22,8,9,9,8,29,89,10);
+		List<Integer> intlist = Arrays.asList(22,22,8,9,9,8,29,89,10,11);
 		
 		System.out.println("sum of number :"+ intlist.stream().mapToInt(n->n).sum());
 		
@@ -36,6 +36,15 @@ public class Rama1 {
 		System.out.println("Distinct odd num");
 		
 		intlist.stream().distinct().filter(n->n%2!=0).forEach(System.out::println);
+		
+		System.out.println("Display Numbers start with 1");
+		
+		intlist.stream()
+				  .map(s->s + "")  //convert interger to string
+					 .filter(s->s.startsWith("1"))
+					   .forEach(System.out::println);
+		
+		
 	}
 
 }
